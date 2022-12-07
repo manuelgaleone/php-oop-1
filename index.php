@@ -9,31 +9,11 @@ Definita una classe ‘Movie’
     
     vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
 */
-
-class Movie
-{
-    public $title;
-    public $genre;
-    public $year;
-    public $author;
-
-    //Instauro il Construct per semplificare le istanze di ogni oggetto
-    function __construct($title, $genre, $year, $author)
-    {
-        $this->title = $title;
-        $this->genre = $genre;
-        $this->year = $year;
-        $this->author = $author;
-    }
-}
-
-class Genre
-{
-}
+require __DIR__ . '/db.php';
 
 $genres = [
-    new Genre('Fantascienza'),
-    new Genre('Futuristico'),
+    new Genre('Fantascientifico', 'Fantascienza pura!'),
+    new Genre('Super Fantascientifico', 'Fantascienza proprio pura!'),
 ];
 
 //Creazione oggetti Movie con relative caratteristiche
@@ -43,9 +23,7 @@ var_dump($movieFirst);
 
 $movieSecond = new Movie('Matrix', 'Fantascienza', '1998', 'Secondo Autore');
 
-//var_dump($movieSecond);
-
-
+var_dump($movieSecond);
 
 ?>
 
